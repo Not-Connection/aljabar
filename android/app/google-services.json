@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "763348082002",
+    "project_id": "aljabar1",
+    "storage_bucket": "aljabar1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763348082002:android:6c0a1c1ba36400f072ae8b",
+        "android_client_info": {
+          "package_name": "com.example.aljabar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtrgKR1xIBL_NPUMnj9uM5DGsW3ROv5Zs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
