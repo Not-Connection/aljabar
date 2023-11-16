@@ -1,5 +1,8 @@
 part of '_index.dart';
 
+SingleSnakeCtrl get ct2 => singleSnakeCtrl;
+SingleSnakeData get dt2 => singleSnakeData.st;
+
 class Dialogs {
   static Future<T?> alert<T>(String message) {
     return RM.navigate.toDialog<T>(
@@ -17,6 +20,32 @@ class Dialogs {
     );
   }
 
+  static Future<T?> gameOver2<T>(String title, String message) => RM.navigate.toDialog<T>(
+        AlertDialog(
+          title: Text(title),
+          content: Text(message),
+          actions: [
+            title == 'Confirmation'
+                ? TextButton(
+                    child: const Text('No'),
+                    onPressed: () {
+                      nav.back();
+                      dt2.rmIsPause.st = false;
+                    },
+                  )
+                : const SizedBox.shrink(),
+            TextButton(
+              child: title == 'Confirmation' ? const Text('Yes') : const Text('OK'),
+              onPressed: () {
+                title == 'Confirmation' ? nav.backUntil(Routes.home) : nav.back();
+                ct2.reset();
+                dt2.timerX.cancel();
+              },
+            ),
+          ],
+        ),
+        postponeToNextFrame: true,
+      );
   static Future<T?> confirmAction<T>(String message) {
     return RM.navigate.toDialog<T>(
       AlertDialog(

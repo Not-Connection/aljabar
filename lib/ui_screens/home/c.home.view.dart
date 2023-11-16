@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
           children: [
             OutlinedButton(
               onPressed: () {
-                nav.to(Routes.single);
+                nav.to(Routes.singleSnake);
               },
               child: const Text('Single Player'),
             ),

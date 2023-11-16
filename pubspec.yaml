@@ -49,6 +49,7 @@ dependencies:
   #*  --- images ---
   flutter_fadein: ^2.0.0
   transparent_image: ^2.0.1
+  simple_gesture_detector: ^0.2.0
   shimmer: ^2.0.0
   image_picker: ^0.8.7+5
   flutter_cache_manager: ^3.3.0
