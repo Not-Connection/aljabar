@@ -11,23 +11,31 @@ class HomeView extends StatelessWidget {
         child: HomeAppbar(),
       ),
       floatingActionButton: const HomeFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            OutlinedButton(
-              onPressed: () {
-                nav.to(Routes.singleSnake);
-              },
-              child: const Text('Single Player'),
-            ),
-            OutlinedButton(
-              onPressed: () {
-                nav.to(Routes.battle);
-              },
-              child: const Text('Playing with Bot'),
-            ),
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/flutter.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              OutlinedButton(
+                onPressed: () {
+                  nav.to(Routes.singleSnake);
+                },
+                child: const Text('Single Player'),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  nav.to(Routes.battle);
+                },
+                child: const Text('Playing with Bot'),
+              ),
+            ],
+          ),
         ),
       ),
     );
