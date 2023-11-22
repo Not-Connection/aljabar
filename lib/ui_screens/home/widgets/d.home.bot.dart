@@ -16,7 +16,7 @@ class HomeBot extends StatelessWidget {
             foregroundColor: Colors.white,
             side: BorderSide(color: Colors.green.shade900, width: 3)),
         onPressed: () {
-          nav.to(Routes.battle);
+          nav.to(Routes.battleSnake);
         },
         child: const Text('Playing with Bot', style: TextStyle(fontSize: 16)),
       ),

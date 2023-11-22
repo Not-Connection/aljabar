@@ -11,5 +11,6 @@ class RouteMap {
     Routes.single: (RouteData data) => const SingleView(),
     Routes.singleSnake: (RouteData data) => const SingleSnakeView(),
     Routes.battle: (RouteData data) => const BattleView(),
+    Routes.battleSnake: (RouteData data) => const BattleSnakeView(),
   };
 }
