@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "aljabar1"
-  }
+  },
+  "targets": {
+    "aljabar1": {
+      "hosting": {
+        "satu": [
+          "aljabar1"
+        ],
+        "dua": [
+          "aljabar"
+        ],
+        "tiga": [
+          "f-snake"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

@@ -4,7 +4,6 @@ Future<void> inits() async {
   logx.wtf('inits start');
 
   WidgetsFlutterBinding.ensureInitialized();
-
   await RM.storageInitializer(config.st.store);
 
   // if (!PlatformType.isWindows) {
@@ -20,4 +19,6 @@ Future<void> inits() async {
   setPathUrlStrategy();
 
   logx.wtf('inits success');
+
+  FlutterNativeSplash.remove();
 }

@@ -1,8 +1,5 @@
 part of '_index.dart';
 
-SingleSnakeCtrl get ct2 => singleSnakeCtrl;
-SingleSnakeData get dt2 => singleSnakeData.st;
-
 class Dialogs {
   static Future<T?> gameOver<T>(String title, String message) => RM.navigate.toDialog<T>(
         AlertDialog(
@@ -57,7 +54,7 @@ class Dialogs {
                     child: const Text('No'),
                     onPressed: () {
                       nav.back();
-                      dt2.rmIsPause.st = false;
+                      Data.singleSnake.st.rmIsPause.st = false;
                     },
                   )
                 : const SizedBox.shrink(),
@@ -65,8 +62,8 @@ class Dialogs {
               child: title == 'Confirmation' ? const Text('Yes') : const Text('OK'),
               onPressed: () {
                 title == 'Confirmation' ? nav.backUntil(Routes.home) : nav.back();
-                ct2.reset();
-                dt2.timerX.cancel();
+                Ctrl.singleSnake.reset();
+                Data.singleSnake.st.timerX.cancel();
               },
             ),
           ],

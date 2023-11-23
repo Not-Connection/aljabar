@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import '../xtras/_index.dart';
 import 'configs/_index.dart';

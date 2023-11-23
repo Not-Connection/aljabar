@@ -1,5 +1,3 @@
-export 'home/_index.dart';
-export 'single/_index.dart';
-export 'battle/_index.dart';
-export 'single_snake/_index.dart';
-export 'battle_snake/_index.dart';
+export 'a.home/_index.dart';
+export 'b.single_snake/_index.dart';
+export 'c.battle_snake/_index.dart';
