@@ -11,7 +11,8 @@ class SingleSnakeBtnPause extends StatelessWidget {
     return OnReactive(
       () => Visibility(
         visible: dt.rmIsRunning.st,
-        child: IconButton(
+        child: TextButton.icon(
+          label: dt.rmIsPause.st ? const Text('resume') : const Text('pause'),
           icon: Icon(
             Icons.pause,
             color: dt.rmIsPause.st ? Colors.green : Colors.orange,

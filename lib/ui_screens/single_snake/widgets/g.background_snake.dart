@@ -8,19 +8,48 @@ class SingleSnakeBackground extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Container(
-          constraints: const BoxConstraints(maxWidth: 700),
-          color: Colors.black.withOpacity(0.8),
-          child: AspectRatio(
-            aspectRatio: 1 / 1,
-            child: Container(
-              width: double.infinity,
-              color: Colors.grey.withOpacity(0.9),
-              margin: const EdgeInsets.all(10),
-              child: const SingleSnakeItemGridView(),
-            ),
-          ),
-        ),
+        MediaQuery.of(context).size.width < 600
+            ? SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SingleSnakeBtnPause(),
+                        SizedBox(width: 5),
+                        SingleSnakeBtnStart(),
+                        SizedBox(width: 5),
+                      ],
+                    ),
+                    Container(
+                      constraints: const BoxConstraints(maxWidth: 700),
+                      color: Colors.brown.shade800,
+                      child: AspectRatio(
+                        aspectRatio: 1 / 1,
+                        child: Container(
+                          width: double.infinity,
+                          color: Colors.black,
+                          margin: const EdgeInsets.all(20),
+                          child: const SingleSnakeItemGridView(),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            : Container(
+                constraints: const BoxConstraints(maxWidth: 700),
+                color: Colors.brown.shade800,
+                child: AspectRatio(
+                  aspectRatio: 1 / 1,
+                  child: Container(
+                    width: double.infinity,
+                    color: Colors.black,
+                    margin: const EdgeInsets.all(30),
+                    child: const SingleSnakeItemGridView(),
+                  ),
+                ),
+              ),
         const SingleSnakePoint()
       ],
     );

@@ -13,7 +13,7 @@ class App extends TopStatelessWidget {
       ),
       child: MaterialApp.router(
         title: config.st.appName,
-        debugShowCheckedModeBanner: true,
+        debugShowCheckedModeBanner: false,
         // ----- ----- ----- ----- -----
         theme: themeRM.lightTheme,
         darkTheme: themeRM.darkTheme,

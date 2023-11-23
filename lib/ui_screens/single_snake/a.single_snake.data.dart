@@ -11,8 +11,8 @@ final singleSnakeData = RM.inject<SingleSnakeData>(
 class SingleSnakeData {
   final String title = 'Snake Game Single';
   final String imageSnake = './assets/images/snakeAladdin.png';
-  final String headSnake = './assets/images/g-logo.png';
-  final String imageApple = './assets/images/g-logo.png';
+  final String headSnake = './assets/images/snake1.png';
+  final String imageApple = './assets/images/apple.png';
 
   final int totalX = 20;
   final int totalY = 20;
@@ -24,6 +24,7 @@ class SingleSnakeData {
   final rmPoint = 0.inj();
 
   final rmSnake = [
+    [0, 3],
     [0, 2],
     [0, 1],
     [0, 0]

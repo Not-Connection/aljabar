@@ -9,7 +9,8 @@ class SingleSnakeBtnStart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnReactive(
-      () => IconButton(
+      () => TextButton.icon(
+        label: dt.rmIsRunning.st ? const Text('stop') : const Text('start'),
         icon: Icon(
           !dt.rmIsRunning.st ? Icons.play_arrow : Icons.stop,
           color: !dt.rmIsRunning.st ? Colors.green : Colors.red,

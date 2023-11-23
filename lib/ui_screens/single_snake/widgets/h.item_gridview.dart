@@ -28,16 +28,14 @@ class SingleSnakeItemGridView extends StatelessWidget {
       listenTo: dt.rmSnake,
       builder: (data) => GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: dt.totalX),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: dt.totalX),
         itemCount: dt.totalX * dt.totalY,
         itemBuilder: (context, index) {
-          var z = 9;
+          var z = 16;
           var indexX = index % dt.totalX;
           var indexY = (index / dt.totalX).floor();
 
-          var isHeadSnake = (indexX == dt.rmSnake.st[0][0]) &&
-              (indexY == dt.rmSnake.st[0][1]);
+          var isHeadSnake = (indexX == dt.rmSnake.st[0][0]) && (indexY == dt.rmSnake.st[0][1]);
 
           var isFood = (indexX == dt.rmFoodX.st) && (indexY == dt.rmFoodY.st);
 
@@ -55,6 +53,12 @@ class SingleSnakeItemGridView extends StatelessWidget {
 
           return InkWell(
             child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: const Color.fromARGB(229, 126, 199, 0),
+              ),
+              margin: const EdgeInsets.all(0.5),
+              // color: const Color.fromARGB(229, 126, 199, 0),
               child: itemX(z),
             ),
             onTap: () => ct.onTapCoordinat(indexX, indexY),

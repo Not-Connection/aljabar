@@ -14,15 +14,17 @@ class SingleSnakeAppbar extends StatelessWidget {
         icon: const Icon(Icons.arrow_back_ios),
         onPressed: () => RM.navigate.back(),
       ),
-      actions: const [
-        Row(
-          children: [
-            SingleSnakeBtnPause(),
-            SizedBox(width: 5),
-            SingleSnakeBtnStart(),
-            SizedBox(width: 5),
-          ],
-        )
+      actions: [
+        MediaQuery.of(context).size.width > 600
+            ? const Row(
+                children: [
+                  SingleSnakeBtnPause(),
+                  SizedBox(width: 5),
+                  SingleSnakeBtnStart(),
+                  SizedBox(width: 5),
+                ],
+              )
+            : const SizedBox.shrink(),
       ],
     );
   }

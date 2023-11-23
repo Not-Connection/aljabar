@@ -10,6 +10,7 @@ class BattleSnakeAppbar extends StatelessWidget {
       actions: [
         MediaQuery.of(context).size.width > 600
             ? const Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   BattleSnakeBtnPause(),
                   SizedBox(width: 5),

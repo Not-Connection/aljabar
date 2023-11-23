@@ -103,14 +103,14 @@ class SingleSnakeCtrl {
     dt.rmIsRunning.st = false;
   }
 
-  play() {
-    if (dt.rmIsPause.st) {
-      // resume game
-    } else {
-      getStart();
-    }
-    dt.rmIsPause.st = false;
-  }
+  // play() {
+  //   if (dt.rmIsPause.st) {
+  //     // resume game
+  //   } else {
+  //     getStart();
+  //   }
+  //   dt.rmIsPause.st = false;
+  // }
 
   move() {
     final arahSnake = dt.rmArah.st;
@@ -206,5 +206,4 @@ class SingleSnakeCtrl {
   }
 
   //* ----- ----- ----- ----- ----- ----- ----- ----- -----
-
 }

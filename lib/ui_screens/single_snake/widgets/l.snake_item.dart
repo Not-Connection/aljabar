@@ -67,8 +67,8 @@ class SingleSnakeItem extends StatelessWidget {
     if (z == -1 || z == -2) {
       return Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          color: z == -1 ? Colors.green : Colors.lightGreen.shade300,
+          borderRadius: BorderRadius.circular(3),
+          color: Colors.green.shade900,
         ),
       );
     }
