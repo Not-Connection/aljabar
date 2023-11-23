@@ -73,6 +73,7 @@ class BattleSnakeItem extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: z == -1 ? Colors.green : Colors.lightGreen.shade300,
+          // color: z == -1 ? Colors.green : Colors.transparent,
         ),
       );
     }

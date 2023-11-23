@@ -6,11 +6,6 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: const PreferredSize(
-      //   preferredSize: Size.fromHeight(56),
-      //   child: HomeAppbar(),
-      // ),
-      // floatingActionButton: const HomeFab(),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(

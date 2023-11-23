@@ -58,6 +58,8 @@ class BattleSnakeItemGridView extends StatelessWidget {
 
           return InkWell(
             child: Container(
+              // color: Colors.blue,
+              // margin: const EdgeInsets.all(3),
               child: itemX(z),
             ),
             onTap: () => _ct.onTapCoordinat(indexX, indexY),
